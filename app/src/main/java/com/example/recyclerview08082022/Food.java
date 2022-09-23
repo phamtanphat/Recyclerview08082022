@@ -13,18 +13,22 @@ public class Food {
     private List<CategoryEnum> categoryEnums;
     private String saleOff;
     private float distance;
-    private long openTime;
-    private long closeTime;
+    private int hourOpenTime;
+    private int minuteOpenTime;
+    private int hourCloseTime;
+    private int minuteCloseTime;
 
-    public Food(int image, String name, String address, List<CategoryEnum> categoryEnums, String saleOff, float distance, long openTime, long closeTime) {
+    public Food(int image, String name, String address, List<CategoryEnum> categoryEnums, String saleOff, float distance, int hourOpenTime, int minutesOpenTime, int hourCloseTime, int minutesCloseTime) {
         this.image = image;
         this.name = name;
         this.address = address;
         this.categoryEnums = categoryEnums;
         this.saleOff = saleOff;
         this.distance = distance;
-        this.openTime = openTime;
-        this.closeTime = closeTime;
+        this.hourOpenTime = hourOpenTime;
+        this.minuteOpenTime = minutesOpenTime;
+        this.hourCloseTime = hourCloseTime;
+        this.minuteCloseTime = minutesCloseTime;
     }
 
     public int getImage() {
@@ -75,19 +79,35 @@ public class Food {
         this.distance = distance;
     }
 
-    public long getOpenTime() {
-        return openTime;
+    public int getHourOpenTime() {
+        return hourOpenTime;
     }
 
-    public void setOpenTime(long openTime) {
-        this.openTime = openTime;
+    public void setHourOpenTime(int hourOpenTime) {
+        this.hourOpenTime = hourOpenTime;
     }
 
-    public long getCloseTime() {
-        return closeTime;
+    public int getMinuteOpenTime() {
+        return minuteOpenTime;
     }
 
-    public void setCloseTime(long closeTime) {
-        this.closeTime = closeTime;
+    public void setMinuteOpenTime(int minuteOpenTime) {
+        this.minuteOpenTime = minuteOpenTime;
+    }
+
+    public int getHourCloseTime() {
+        return hourCloseTime;
+    }
+
+    public void setHourCloseTime(int hourCloseTime) {
+        this.hourCloseTime = hourCloseTime;
+    }
+
+    public int getMinuteCloseTime() {
+        return minuteCloseTime;
+    }
+
+    public void setMinuteCloseTime(int minuteCloseTime) {
+        this.minuteCloseTime = minuteCloseTime;
     }
 }
