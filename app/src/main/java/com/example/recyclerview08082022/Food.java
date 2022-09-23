@@ -6,6 +6,7 @@ import java.util.List;
  * Created by pphat on 9/23/2022.
  */
 public class Food {
+    public final static String instance = "Food Class";
     private int image;
     private String name;
     private String address;
