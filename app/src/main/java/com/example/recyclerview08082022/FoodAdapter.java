@@ -1,6 +1,9 @@
 package com.example.recyclerview08082022;
 
+import android.text.Html;
 import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.style.ClickableSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,7 +69,8 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
             tvName.setText(food.getName());
             tvAddress.setText(food.getAddress());
             tvDistance.setText(String.format(">%.1f km", food.getDistance()));
-            // List Service Kind
+
+            // Category
             categoryList = food.getCategoryEnums();
             if (categoryList == null || categoryList.size() == 0) {
                 tvCategory.setVisibility(View.GONE);
@@ -79,8 +83,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
                         if (i == food.getCategoryEnums().size() - 1) {
                             builder.append(food.getCategoryEnums().get(i).toString());
                         } else {
-                            builder.append(food.getCategoryEnums().get(i).toString());
-                            builder.append(" - ");
+                            builder.append(food.getCategoryEnums().get(i).toString() + "/");
                         }
                     }
                     tvCategory.setVisibility(View.VISIBLE);
