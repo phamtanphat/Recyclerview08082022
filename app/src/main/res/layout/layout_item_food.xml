@@ -25,7 +25,9 @@
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/text_view_name"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            tools:visibility="visible"/>
 
         <TextView
             android:textSize="12sp"
@@ -33,7 +35,7 @@
             android:textColor="#ffff"
             android:textAlignment="center"
             android:gravity="center"
-            android:text="Đóng cửa \n Đặt bàn vào lúc 12h:30"
+            tools:text="Đóng cửa \n Đặt bàn vào lúc 12h:30"
             android:background="#CC000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

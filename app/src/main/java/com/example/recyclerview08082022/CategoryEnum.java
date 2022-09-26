@@ -8,7 +8,10 @@ public enum CategoryEnum {
     BIRTH_DAY("Sinh nhật"),
     FAMILY("Gia đình"),
     GROUP("Hội nhóm"),
-    STORE("Cửa hàng");
+    STORE("Cửa hàng"),
+    SHOP_ONLINE("Shop Online"),
+    STREET_FOOD("Đồ ăn đường phố"),
+    BUFFET("Buffer");
 
     private final String name;
 
