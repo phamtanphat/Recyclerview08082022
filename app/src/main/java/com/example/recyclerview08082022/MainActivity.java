@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
         foodAdapter.setOnItemClickListener(new FoodAdapter.OnItemClickListener() {
             @Override
             public void onClick(int position) {
-                Toast.makeText(MainActivity.this, foodList.get(position).getName(), Toast.LENGTH_SHORT).show();
+                foodList.remove(position);
+                foodAdapter.notifyItemRemoved(position);
             }
         });
     }
